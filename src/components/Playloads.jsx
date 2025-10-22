@@ -11,8 +11,8 @@ export default function Playloads() {
       status: 'Active'
     },
     {
-      title: 'DRONE PILOTING',
-      description: 'UAV operation mastery including reconnaissance, tactical maneuvering, and payload deployment scenarios.',
+      title: 'ETHICS',
+      description: 'Study hard not because there are right answers to be found, but because you must live with the decisions you make.',
       status: 'Coming Soon'
     }
   ]
