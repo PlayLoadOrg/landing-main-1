@@ -1,18 +1,24 @@
-export default function Mission() {
-  return (
-    <div style={{ maxWidth: '900px', width: '100%' }}>
-      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <h1 className="hero-title">PLAYLOAD.ORG</h1>
-        <h2 className="hero-subtitle">HIGH CALIBER WAR GAMES</h2>
-        <button className="btn-pill">Enter Training</button>
-      </div>
+// Mission.jsx
 
+import React, { useEffect } from 'react';
+
+export default function Mission() {
+  // This hook runs once after the component mounts to the screen.
+  // It finds the main scrolling container and scrolls it to the top.
+  useEffect(() => {
+    const contentWrapper = document.querySelector('.content-wrapper');
+    if (contentWrapper) {
+      contentWrapper.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, []); // The empty dependency array [] means this effect runs only once.
+
+  return (
+    <>
       <div className="glass-container">
         <h3 className="section-heading">Mission Brief</h3>
         <p className="paragraph">
           PLAYLOAD delivers next-generation tactical training through immersive gaming experiences. 
-          Our platform combines cognitive warfare, cybersecurity defense, and drone operations into 
-          engaging simulations that sharpen critical skills for modern conflict.
+          Our philosophy centers around decisions and intuition building rather than rote memorization.
         </p>
         <p className="paragraph">
           Whether you're training for military operations, corporate security, or competitive gaming, 
@@ -24,14 +30,18 @@ export default function Mission() {
       <div className="glass-container">
         <h3 className="section-heading">Intelligence Overview</h3>
         <p className="paragraph">
-          Built by veterans and security professionals, our training modules are designed to simulate 
+          Designed from NATO doctrine, our training modules are designed to simulate 
           real-world scenarios with accurate threat modeling and tactical decision-making frameworks.
         </p>
         <p className="paragraph">
-          All training data is anonymized and encrypted. We comply with international security standards 
-          and maintain strict operational security protocols.
+          All of our Playloads are released open source and are user funded based on a donation model 
+          rather than traditional procurement. After your IT team audits, you can run the code on your 
+          own servers, mod with your own confidential or proprietary scenarios without any need to
+          get our permission. In other words, the same way that a Word document is your property even
+          though the program belongs to Microsoft, the specific scenarios you create to run on our platform
+          belong to you. If you want us to create custom scenarios, contact us. We can do that. 
         </p>
       </div>
-    </div>
-  )
+    </>
+  );
 }

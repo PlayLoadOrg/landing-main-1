@@ -18,7 +18,7 @@ export default function Playloads() {
   ]
 
   return (
-    <div style={{ maxWidth: '900px', width: '100%' }}>
+    <>
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <h2 className="section-heading">Training Modules</h2>
         <p className="paragraph">
@@ -47,6 +47,6 @@ export default function Playloads() {
           )}
         </div>
       ))}
-    </div>
+    </>
   )
 }
